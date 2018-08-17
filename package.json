@@ -1,0 +1,33 @@
+{
+  "name": "keypress-event",
+  "version": "1.0.0",
+  "description": "Listen to the key press",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint --project tsconfig.json && tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/linyimin-bupt/keypress-event.git"
+  },
+  "keywords": [
+    "typescript",
+    "iohook",
+    "keypress",
+    "keycode"
+  ],
+  "author": "Yimin Lin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/linyimin-bupt/keypress-event/issues"
+  },
+  "homepage": "https://github.com/linyimin-bupt/keypress-event#readme",
+  "dependencies": {
+    "cuid": "^2.1.2",
+    "iohook": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/cuid": "^1.3.0"
+  }
+}
