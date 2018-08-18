@@ -28,8 +28,8 @@ type KEY_TYPE   = keyof typeof KEY_NAME
 
 type KEYBOARD_TYPE = keyof typeof KEY_MAP
 
-type TwoKeys    = [KEY_TYPE,  string]
-type ThreeKeys  = [KEY_TYPE, KEY_TYPE, string]
+export type TwoKeys    = [KEY_TYPE,  string]
+export type ThreeKeys  = [KEY_TYPE, KEY_TYPE, string]
 
 export class Keypress {
 
