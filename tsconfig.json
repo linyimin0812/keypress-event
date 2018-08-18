@@ -18,7 +18,7 @@
     , "dist/"
   ]
   , "include": [
-      "*.ts"
+      "src/*.ts"
      , "tests/**/*.spec.ts"
      ,
   ]
