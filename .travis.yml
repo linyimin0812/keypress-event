@@ -1,8 +1,40 @@
 language : node_js
 node_js:
   - "10"
+  - "9"
 install:
  - npm install
-script:
- - npm test
- - npm run build
+
+cache:
+  directories:
+    - node_modules
+
+stages:
+  - test
+  - name: deploy
+    if: (type = push) AND branch =~ ^(master|v\d+\.\d+)$
+
+ jobs:
+  include:
+    - stage: test
+      script:
+        - node --version
+        - npm --version
+        - echo "Testing Started ..."
+        - npm test
+        - echo "Testing Finished."
+
+    - stage: deploy
+      script:
+        - echo "NPM Deploying Started ..."
+        - npm version
+        - npm run build
+        - echo "NPM Building Finished."
+
+      deploy:
+        provider: npm
+        email: linyimin520812@gmail.com
+        api_key: "$NPM_TOKEN"
+        skip_cleanup: true
+        on:
+          all_branches: true
