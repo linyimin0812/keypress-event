@@ -1,6 +1,6 @@
 {
   "name": "keypress-event",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Listen to the key press",
   "main": "dist/index.js",
   "scripts": {
