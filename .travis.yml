@@ -6,10 +6,6 @@ install:
  - npm install
 os:
   - linux
-  
-cache:
-  directories:
-    - node_modules
 
 stages:
   - test
@@ -39,4 +35,3 @@ jobs:
         skip_cleanup: true
         on:
           all_branches: true
-          
