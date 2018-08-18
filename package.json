@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/linyimin-bupt/keypress-event#readme",
   "dependencies": {
-    "iohook": "^0.2.0"
+    "iohook": "^0.2.0",
+    "typescript": "^3.0.1"
   }
 }
