@@ -4,7 +4,9 @@ node_js:
   - "9"
 install:
  - npm install
-
+os:
+  - linux
+  
 cache:
   directories:
     - node_modules
@@ -12,9 +14,8 @@ cache:
 stages:
   - test
   - name: deploy
-    if: (type = push) AND branch =~ ^(master|v\d+\.\d+)$
 
- jobs:
+jobs:
   include:
     - stage: test
       script:
