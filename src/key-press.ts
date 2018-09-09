@@ -89,7 +89,7 @@ export class Keypress {
             const secodeKey = value[1].toLowerCase() + 'Key'
             const lastKey = Keypress.getLastKey(value)
             const lastKeyCode = event.shiftKey ? KEY_MAP[lastKey] + 32 : KEY_MAP[lastKey]
-            if (event[firstKey] && event[secodeKey]) {
+            if (event[firstKey] && event[secodeKey] && lastKeyCode === event.rawcode) {
               Keypress.shortcutEvent.emit(value.join('+'))
             }
             break
